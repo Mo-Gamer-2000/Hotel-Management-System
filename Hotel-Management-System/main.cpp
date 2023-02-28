@@ -1,8 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int main() 
-{
+int main() {
 	int quant;
 	int choice;
 
@@ -23,7 +22,7 @@ int main()
 	int Schicken = 0;
 
 	// Total proce of items
-	int Total_tooms = 0;
+	int Total_rooms = 0;
 	int Total_pasta = 0;
 	int Total_burger = 0;
 	int Total_noodles = 0;
@@ -62,4 +61,91 @@ int main()
 
 	cout << "\n\n Please, enter your choice: ";
 	cin >> choice;
+
+	switch (choice) {
+	case 1:
+		cout << "\n\n Enter the number of room you want: ";
+		cin >> quant;
+		if (Qrooms - Srooms >= quant) {
+			Srooms = Srooms + quant;
+			Total_rooms = Total_rooms + quant * 1200;
+			cout << "\n\n\t\t" << quant << "room/s have been allocated to you: ";
+
+		}
+		else
+		{
+			cout << "\n\tOnly" << Qrooms - Srooms << "room/s remaining in the hotel: ";
+			break;
+		}
+	case 2:
+		cout << "\n\n Enter pasta quantity: ";
+		cin >> quant;
+		if (Qpasta - Spasta >= quant) {
+			Spasta = Spasta + quant;
+			Total_pasta = Total_pasta + quant * 250;
+			cout << "\n\n\t\t" << quant << "pasta is the order: ";
+
+		}
+		else
+		{
+			cout << "\n\tOnly" << Qpasta - Spasta << "pasta remaining in the hotel: ";
+			break;
+		}
+	case 3:
+		cout << "\n\n Enter burger quantity: ";
+		cin >> quant;
+		if (Qburger - Sburger >= quant) {
+			Sburger = Sburger + quant;
+			Total_burger = Total_burger + quant * 150;
+			cout << "\n\n\t\t" << quant << "burger is the order: ";
+
+		}
+		else
+		{
+			cout << "\n\tOnly" << Qburger - Sburger << "burger remaining in the hotel: ";
+			break;
+		}
+	case 4:
+		cout << "\n\n Enter noodles quantity: ";
+		cin >> quant;
+		if (Qnoodles - Snoodles >= quant) {
+			Snoodles = Snoodles + quant;
+			Total_noodles = Total_noodles + quant * 50;
+			cout << "\n\n\t\t" << quant << "noodles is the order: ";
+
+		}
+		else
+		{
+			cout << "\n\tOnly" << Qnoodles - Snoodles << "noodles remaining in the hotel: ";
+			break;
+		}
+	case 5:
+		cout << "\n\n Enter shake quantity: ";
+		cin >> quant;
+		if (Qshake - Sshake >= quant) {
+			Sshake = Sshake + quant;
+			Total_shake = Total_shake + quant * 120;
+			cout << "\n\n\t\t" << quant << "shake is the order: ";
+
+		}
+		else
+		{
+			cout << "\n\tOnly" << Qshake - Sshake << "noodles remaining in the hotel: ";
+			break;
+		}
+	case 6:
+		cout << "\n\n Enter chicken-roll quantity: ";
+		cin >> quant;
+		if (Qchicken - Schicken >= quant) {
+			Schicken = Schicken + quant;
+			Total_chicken = Total_chicken + quant * 175;
+			cout << "\n\n\t\t" << quant << "chicken is the order: ";
+
+		}
+		else
+		{
+			cout << "\n\tOnly" << Qchicken - Schicken << "chicken-roll remaining in the hotel: ";
+			break;
+		}
+	}
 };
